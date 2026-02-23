@@ -16,23 +16,26 @@ const skills = {
   ],
 };
 
+// helper to prepend the Vite base path to public assets
+const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 const projects = [
   {
     title: "Gaming Blog Website",
     description: "Description – Designed and developed a responsive blog website to showcase gaming insights and web projects, featuring a clean layout and user-friendly navigation.",
-    image: "/project1.png",
+    image: asset("project1.png"),
     url: "https://mthwgaming.wordpress.com/",
   },
   {
     title: "Booking-App Barbershop Mock-Up",
     description: "Description – Designed a barbershop booking system with login and appointment scheduling, ensuring a clean interface and consistent user experience across pages.",
-    image: "/project2.png",
+    image: asset("project2.png"),
     url: "https://www.figma.com/design/BRLyWDqZjK1Lo4jawSnn0U/SSAD-DESIGN?node-id=1-913&t=s4JXxCJuJwmmyXFJ-1",
   },
   {
     title: "Responsive Blog Platform",
     description: "Description – Built a responsive blog platform with structured content layout and optimized navigation for seamless user experience.",
-    image: "/project3.png",
+    image: asset("project3.png"),
     url: "https://www.figma.com/design/H2PkfsAB2wS0j0Vqw7BWjY/Untitled?node-id=0-1&t=c4bKr49x4r2iQlt7-1",
   },
 ];
@@ -64,7 +67,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10 mb-20">
           {/* Hero photo */}
           <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border border-border mx-auto md:mx-0">
-            <img src="/Hero.jpg" alt="Hero" className="w-full h-full object-cover" />
+            <img src={asset("Hero.jpg")} alt="Hero" className="w-full h-full object-cover" />
           </div>
 
           <div>
