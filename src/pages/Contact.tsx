@@ -30,15 +30,15 @@ const Contact = () => {
 
             <div className="flex items-center gap-3 mb-6">
               <Mail size={18} className="text-foreground" />
-              <a href="mailto:matthewmvenzo@gmail.com" className="text-sm text-foreground underline">
-                matthewmvenzo@gmail.com
+              <a href="mailto:mathewmvenzon@gmail.com" className="text-sm text-foreground underline">
+                mathewmvenzon@gmail.com
               </a>
             </div>
 
             <div className="flex items-center gap-3">
-              <a href="#" className="social-icon" aria-label="LinkedIn"><Linkedin size={20} /></a>
-              <a href="#" className="social-icon" aria-label="GitHub"><Github size={20} /></a>
-              <a href="#" className="social-icon" aria-label="Facebook"><Facebook size={20} /></a>
+              <a href="https://www.linkedin.com/in/mathew-venzon-720703327" className="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
+              <a href="https://github.com/Mathew-24" className="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><Github size={20} /></a>
+              <a href="https://www.facebook.com/share/1DrvJqqydh/" className="social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><Facebook size={20} /></a>
             </div>
           </div>
 

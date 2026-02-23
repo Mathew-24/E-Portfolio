@@ -23,7 +23,7 @@ const Home = () => {
               <h2 className="text-2xl font-bold text-foreground">Venzon, Mathew Jeremy M</h2>
               <p className="text-base text-muted-foreground mt-1">Web Developer | UI Designer</p>
             </div>
-            <p className="text-sm text-muted-foreground mb-8">Tagline Here:</p>
+            <p className="text-sm text-muted-foreground mb-8">Turning Ideas Into Interactive Reality.</p>
 
             <Link to="/contact" className="hire-btn">
               Hire Me

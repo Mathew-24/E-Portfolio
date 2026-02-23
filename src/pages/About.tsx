@@ -3,31 +3,37 @@ import Footer from "@/components/Footer";
 
 const skills = {
   technical: [
-    { name: "HTML", value: 70 },
-    { name: "CSS", value: 65 },
-    { name: "JavaScript", value: 55 },
-    { name: "React", value: 50 },
+    { name: "Figma", value: 90 },
+    { name: "Adobe", value: 65 },
+    { name: "Sketch", value: 80 },
+    { name: "Canva", value: 90 },
   ],
   soft: [
     { name: "Communication", value: 80 },
     { name: "Teamwork", value: 75 },
     { name: "Problem Solving", value: 70 },
-    { name: "Time Management", value: 65 },
+    { name: "Time Management", value: 80 },
   ],
 };
 
 const projects = [
   {
-    title: "Project 1",
-    description: "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Gaming Blog Website",
+    description: "Description – Designed and developed a responsive blog website to showcase gaming insights and web projects, featuring a clean layout and user-friendly navigation.",
+    image: "/project1.png",
+    url: "https://mthwgaming.wordpress.com/",
   },
   {
-    title: "Project 2",
-    description: "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Booking-App Barbershop Mock-Up",
+    description: "Description – Designed a barbershop booking system with login and appointment scheduling, ensuring a clean interface and consistent user experience across pages.",
+    image: "/project2.png",
+    url: "https://www.figma.com/design/BRLyWDqZjK1Lo4jawSnn0U/SSAD-DESIGN?node-id=1-913&t=s4JXxCJuJwmmyXFJ-1",
   },
   {
-    title: "Project 3",
-    description: "Description - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    title: "Responsive Blog Platform",
+    description: "Description – Built a responsive blog platform with structured content layout and optimized navigation for seamless user experience.",
+    image: "/project3.png",
+    url: "https://www.figma.com/design/H2PkfsAB2wS0j0Vqw7BWjY/Untitled?node-id=0-1&t=c4bKr49x4r2iQlt7-1",
   },
 ];
 
@@ -56,21 +62,15 @@ const About = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-10 mb-20">
-          {/* Profile Image Placeholder */}
-          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full placeholder-img border border-border mx-auto md:mx-0 overflow-hidden">
-            <div className="w-full h-full flex items-center justify-center">
-              <svg className="w-12 h-12 opacity-30" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
-                <circle cx="50" cy="50" r="45" />
-                <line x1="5" y1="5" x2="95" y2="95" />
-                <line x1="95" y1="5" x2="5" y2="95" />
-              </svg>
-            </div>
+          {/* Hero photo */}
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border border-border mx-auto md:mx-0">
+            <img src="/Hero.jpg" alt="Hero" className="w-full h-full object-cover" />
           </div>
 
           <div>
             <h2 className="text-xl font-bold text-foreground mb-4">Hello my name is Mathew</h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Hello, my name is Venzon, Mathew Jeremy M. I am a passionate and dedicated Web Developer and UI Designer who enjoys building clean, responsive, and user-friendly websites. I focus on creating modern designs with strong structure and smooth user experience. I am always eager to learn new technologies, improve my skills, and take on challenges that help me grow both personally and professionally. My goal is to develop digital solutions that are not only functional but also visually appealing and impactful.
             </p>
           </div>
         </div>
@@ -104,20 +104,26 @@ const About = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <div key={i} className="project-card border border-border">
-              {/* Project Image Placeholder */}
-              <div className="placeholder-img w-full aspect-video">
-                <svg className="w-10 h-10 opacity-30" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
-                  <rect x="5" y="5" width="90" height="90" />
-                  <line x1="5" y1="5" x2="95" y2="95" />
-                  <line x1="95" y1="5" x2="5" y2="95" />
-                </svg>
+            <a
+              key={i}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-card border border-border block"
+            >
+              {/* Project Image */}
+              <div className="w-full aspect-video overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-4">
                 <h3 className="font-bold text-foreground mb-2">{project.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{project.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </main>
